@@ -98,9 +98,9 @@ SRC_LIBUSB   := $(SRCDIR)/libusb
 SRC_LIBFTDI  := $(SRCDIR)/libftdi
 
 # The version that will be appended to the various tool builds.
-RGT_VERSION := 8.3.0-2019.08.0-RC4
-RGDB_VERSION := 8.3.0-2019.08.0-RC4
-RGBU_VERSION := 2.32.0-2019.08.0-RC4
+RGT_VERSION := 8.3.0-2019.08.0-RC5
+RGDB_VERSION := 8.3.0-2019.08.0-RC5
+RGBU_VERSION := 2.32.0-2019.08.0-RC5
 ROCD_VERSION := 0.10.0-2019.08.0-RC2
 RQEMU_VERSION := 4.1.0-2019.08.0-RC3
 XC3SP_VERSION := 0.1.2-2019.08.0-RC2
@@ -504,8 +504,8 @@ $(OBJDIR)/%/build/riscv-gnu-toolchain/build-newlib-nano/stamp: \
 		--enable-newlib-nano-formatted-io \
 		--disable-newlib-supplied-syscalls \
 		--disable-nls \
-		CFLAGS_FOR_TARGET="-DPREFER_SIZE_OVER_SPEED -Os -ffunction-sections -fdata-sections $(CFLAGS_FOR_TARGET)" \
-		CXXFLAGS_FOR_TARGET="-DPREFER_SIZE_OVER_SPEED -Os -ffunction-sections -fdata-sections $(CXXFLAGS_FOR_TARGET)" &>make-configure.log
+		CFLAGS_FOR_TARGET="-Os -ffunction-sections -fdata-sections $(CFLAGS_FOR_TARGET)" \
+		CXXFLAGS_FOR_TARGET="-Os -ffunction-sections -fdata-sections $(CXXFLAGS_FOR_TARGET)" &>make-configure.log
 	$(MAKE) -C $(dir $@) &>$(dir $@)/make-build.log
 	$(MAKE) -C $(dir $@) install &>$(dir $@)/make-install.log
 	date > $@
