@@ -3,6 +3,7 @@
 	url = git://github.com/libexpat/libexpat.git
 [submodule "src/riscv-binutils"]
 	path = src/riscv-binutils
+	url = https://github.com/azaparov/riscv-binutils-gdb.git
 [submodule "src/riscv-gcc"]
 	path = src/riscv-gcc
 	url = git://github.com/sifive/riscv-gcc.git
