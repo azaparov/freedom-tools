@@ -3,7 +3,6 @@
 	url = git://github.com/libexpat/libexpat.git
 [submodule "src/riscv-binutils"]
 	path = src/riscv-binutils
-	url = git://github.com/sifive/riscv-binutils-gdb.git
 [submodule "src/riscv-gcc"]
 	path = src/riscv-gcc
 	url = git://github.com/sifive/riscv-gcc.git
@@ -27,7 +26,7 @@
 	url = git://github.com/dgibson/dtc.git
 [submodule "src/freedom-elf2hex"]
 	path = src/freedom-elf2hex
-	url = git://github.com/sifive/freedom-elf2hex.git
+	url = git://github.com/azaparov/freedom-elf2hex.git
 [submodule "src/riscv-qemu"]
 	path = src/riscv-qemu
 	url = git://git.qemu.org/qemu.git

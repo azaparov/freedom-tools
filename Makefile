@@ -1,3 +1,5 @@
+SHELL := /bin/bash
+
 # The default target
 .PHONY: all toolchain openocd qemu xc3sprog trace-decoder sdk-utilities
 all:
@@ -232,7 +234,7 @@ $(UBUNTU32)-rgcc-configure   := --without-system-zlib
 $(UBUNTU32)-expat-configure  := --host=i686-linux-gnu
 $(UBUNTU32)-xc3sp-host       := --host=x86_64-linux-gnu
 $(UBUNTU64)-rgt-host         := --host=x86_64-linux-gnu
-$(UBUNTU64)-rgcc-configure   := --without-system-zlib
+$(UBUNTU64)-rgcc-configure   := --with-system-zlib
 $(UBUNTU64)-ousb-configure   := --disable-shared
 $(UBUNTU64)-rocd-host        := --host=x86_64-linux-gnu
 $(UBUNTU64)-odeps-vars       := PKG_CONFIG_PATH="$(abspath $(OBJ_UBUNTU64)/install/riscv-openocd-$(ROCD_VERSION)-$(UBUNTU64))/lib/pkgconfig" CFLAGS="-I$(abspath $(OBJ_UBUNTU64)/install/riscv-openocd-$(ROCD_VERSION)-$(UBUNTU64))/include -fPIC" LDFLAGS="-L$(abspath $(OBJ_UBUNTU64)/install/riscv-openocd-$(ROCD_VERSION)-$(UBUNTU64))/lib -pthread"
